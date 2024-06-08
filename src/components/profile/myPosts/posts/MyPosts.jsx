@@ -25,7 +25,7 @@ const MyPosts =(props)=> {
 
 let addMessage = () => {
   //props.dispatch({type:"ADD-POST"})
-  let action = addPostActionCreator ();
+  let action = addPostActionCreator();
 props.dispatch(action)
 }
 

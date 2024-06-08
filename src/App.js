@@ -20,17 +20,21 @@ import { Routes, Route } from 'react-router-dom';
       <Routes>
 
       <Route path = "/profile" 
-      element ={ <Profile profilePage ={props.state.profilePage} 
-
+      element ={ <Profile 
+      profilePage ={props.state.profilePage} 
       dispatch = {props.dispatch}
-
       //  addPost = {props.addPost}
       //  updateNewPost = {props.updateNewPost} 
       />}/>
+
       <Route
        path = "/dialogues" 
-      element={<Dialogues dialogues = {props.state.dialoguesArray} 
-      messages = {props.state.messagesArray}/>}/>
+      element={<Dialogues 
+      dialogues = {props.state.dialoguesArray} 
+      messages = {props.state.messagesPage.messagesArray}
+      newMessageText = {props.state.messagesPage.newMessageText}
+      dispatch = {props.dispatch}
+      />}/>
       </Routes>     
      
     </div>
